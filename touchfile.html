@@ -15,6 +15,28 @@
          and it tells Git to record all new commits on that branch.</h5>
     <h6> This is a first line in a V1
          This is a second line in a V2
-         This is a third line in a V3 </h6>     
+         This is a third line in a V3 </h6>    
+     <p> I have used fetch followed by checkout...
+
+        git fetch <remote> <rbranch>:<lbranch>
+        git checkout <lbranch>
+        ...where <rbranch> is the remote branch or source ref and <lbranch> 
+            is the as yet non-existent local branch or destination ref you want to 
+            and which you probably want to name the same as the remote branch or source 
+            ref. This is explained under options in the explanation of <refspec>.
+        
+        Bash is so smart it auto completes the first command if I tab after the first 
+        few letters of the remote branch. That is, I don't even have to name the local
+         branch; Bash automatically copies the name of the remote branch for me. Thanks,
+          Bash!
+        
+        Also as the answer in this similar Stack Overflow post shows, if you don't name
+         the local branch in fetch, you can still create it when you check it out by using
+        the -b flag. That is, git fetch <remote> <branch> followed by git checkout -b 
+      <branch> <remote>/<branch> does exactly the same as my initial answer.
+         And evidently, if your repository has only one remote, then you can just do git 
+         checkout <branch> after fetch and it will create a local branch for you. 
+            For example, you just cloned a repository and want to check out additional 
+            branches from the remote.</p>     
 </body>
 </html>
