@@ -1,2 +1,1 @@
-# myrepo
-notes
+To use git pull and git push, you have to tell your local branch that on which branch is going to operate. So, the term origin master is used to deal with a remote repository and master branch. The term push origin master is used to push the changes to the remote repository.
